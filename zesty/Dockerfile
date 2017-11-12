@@ -1,14 +1,10 @@
 FROM ubuntu:zesty
 
-ADD https://github.com/krallin/tini/releases/download/v0.16.1/tini /tini
-
 RUN set -x && \ 
     apt update -y && \
-    apt install -y openssh-server git sudo && \
-    chmod +x /tini
+    apt install -y openssh-server git sudo
 
 ADD ./sshd_config /etc/ssh/sshd_config
-ADD ./keys/key.rsa.pub /root/.ssh/authorized_keys
 
 RUN set -x && \
     ssh-keygen -A && \
@@ -39,6 +35,7 @@ RUN set -e && \
       -not -name '*systemd-user-sessions*' \
       -exec rm \{} \; && \
     systemctl set-default multi-user.target
+
 
 ENTRYPOINT [ "/bin/bash" ]
 CMD [ "-c", "exec /sbin/init --log-target=journal 3>&1" ]
