@@ -23,7 +23,8 @@ RUN set -x && \
     sed 's@session\s*required\s*pam_loginuid.so@session optional pam_loginuid.so@g' \
       -i /etc/pam.d/sshd && \
     echo "ubuntu:ubuntu" | chpasswd && \
-    echo "root:root" | chpasswd
+    echo "root:root" | chpasswd && \
+    echo 'ubuntu  ALL=(ALL:ALL) NOPASSWD: ALL' >> /etc/sudoers
 
 
 RUN set -e && \

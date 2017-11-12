@@ -10,7 +10,7 @@ install:
   - 'make images'
 
 script:
-  - 'make test'
+  - 'sudo make test'
 
 after_success:
   - if [[ "$TRAVIS_BRANCH" == "master" ]]; then

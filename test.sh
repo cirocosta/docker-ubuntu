@@ -30,6 +30,7 @@ generate_keys() {
     -C "test@test.com" \
     -f ./key.rsa -P ""
   chmod 400 ./key.rsa
+  chmod 600 ./key.rsa.pub
 }
 
 # runs a container with the public key
