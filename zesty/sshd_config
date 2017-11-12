@@ -1,0 +1,5 @@
+PermitRootLogin yes
+PubkeyAuthentication yes
+PasswordAuthentication yes
+PermitEmptyPasswords yes
+Subsystem sftp internal-sftp
