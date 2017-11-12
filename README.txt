@@ -64,4 +64,9 @@ Usage:
           
           ssh -i ./key.rsa root@localhost -p 2222
 
+          ps.:  when you volume mount the file `key.rsa.pub` you might 
+                have problems due to permissions (you'll mount the file
+                having the permissions from the user that created the 
+                file). Make sure you adjust the permissions or, if you're
+                mounting for root, that you create the key file as root.
 
