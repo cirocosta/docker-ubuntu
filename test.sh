@@ -21,7 +21,7 @@ run_container() {
 }
 
 run_ssh_command() {
-  chmod 400 ./zesty/keys/key.rsa root@localhost
+  chmod 400 ./zesty/keys/key.rsa
   ssh \
     -i ./zesty/keys/key.rsa root@localhost \
     -p 2222 \
