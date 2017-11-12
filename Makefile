@@ -4,7 +4,10 @@ image-zesty:
 
 images: image-zesty
 
+push-images:
+	docker push cirocosta/ubuntu
+
 test:
 	bash ./test.sh
 
-.PHONY: images test
+.PHONY: images test push-images
