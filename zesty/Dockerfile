@@ -8,6 +8,7 @@ ADD ./sshd_config /etc/ssh/sshd_config
 
 RUN set -x && \
     ssh-keygen -A && \
+    mkdir -p /root/.ssh && \
     git config --system user.email "git@example.com" && \
     git config --system user.name "Git User" && \
     mkdir /var/run/sshd && \
