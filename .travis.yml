@@ -7,7 +7,7 @@ before_install:
   - './.travis/main.sh'
 
 install:
-  - 'make image'
+  - 'make images'
 
 script:
   - 'make test'
