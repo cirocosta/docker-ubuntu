@@ -5,7 +5,7 @@ Why?
   The official `library/ubuntu` image does not contain SSHD running
   by default as well as systemd. Thus, this images replicates a little 
   better the environment of an ubuntu machine. The tradeoff is that
-  it requires more privileges and volume mounting the group virtual
+  it requires more privileges and volume mounting the cgroup virtual
   filesystem.
 
 Usage:
